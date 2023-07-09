@@ -6,7 +6,7 @@
 // 10 09 08 07
 
 
-
+//Стандартный вывод двумерного масива
 void ShowArray(int[,] mass)
 {
     for (int i = 0; i < mass.GetLength(0); i++)
@@ -22,21 +22,27 @@ void ShowArray(int[,] mass)
     Console.WriteLine("-----------------------------------------");
 }
 
+// Заполнение змейкой
 void SnackeArray(int[,] array)
 {
+    //Размерность масива
     int n = array.GetLength(0);
     int m = array.GetLength(1);
-
-
+    
     int row = 0;
     int col = 0;
+
+// Переменые для передвижения
 
     int x = 1;
     int y = 0;
 
+    //Количество смены направления движения 
     int dip = 0;
+    //Старт и количество необходтмых движений в сторону по масиву
     int moove = m;
 
+// Переменая для свапа переменых
     int time;
 
     for (int i = 1; i <= m * n; i++)
@@ -54,14 +60,10 @@ void SnackeArray(int[,] array)
         col += x;
         row += y;
     }
-
-
-
-
 }
 
 const int lenght = 4;
-const int lenght2 = 6;
+const int lenght2 = 4;
 
 int[,] arraysnack = new int[lenght, lenght2];
 
